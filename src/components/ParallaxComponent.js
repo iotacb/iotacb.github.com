@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
 
 function ParallaxComponent({children, speed = 1, className = ""}) {

@@ -18,7 +18,7 @@ function Navbar({ logo, links, onChange = () => {}, scrollThreshold = 60 }) {
 		checkScroll();
 
 		return window.removeEventListener("scroll", checkScroll);
-	}, []);
+	}, [scrollThreshold]);
 
 	const LinkItem = ({ link, className }) => {
 		return (
