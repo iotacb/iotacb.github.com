@@ -1,5 +1,5 @@
 import { useState, useEffect, Fragment } from "react";
-import { motion, useViewportScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
@@ -305,12 +305,12 @@ const Projects = () => {
 				className="font-medium text-2xl md:text-4xl xl:text-6xl text-textDark dark:text-textLight"
 			>
 				<p>
-					<a
+					<p
 						onClick={() => nav("/projects")}
 						className="text-accent hover:text-accentLight transition-colors cursor-pointer"
 					>
 						here
-					</a>{" "}
+					</p>{" "}
 					you can a all of my projects and get information about them
 				</p>
 			</motion.div>

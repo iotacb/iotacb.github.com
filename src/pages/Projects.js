@@ -1,18 +1,18 @@
 import { useState, useEffect } from "react";
-import { motion, useViewportScroll } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+// import { useNavigate } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
-import ParallaxComponent from "../components/ParallaxComponent";
+// import ParallaxComponent from "../components/ParallaxComponent";
 import SlidingText from "../components/SlidingText";
 
-import accessory1 from "../assets/accessory1.svg";
-import accessory2 from "../assets/accessory2.svg";
-import accessory3 from "../assets/accessory3.svg";
-import accessory5 from "../assets/accessory5.svg";
-import accessory6 from "../assets/accessory6.svg";
-import accessory7 from "../assets/accessory7.svg";
-import outline from "../assets/outline.svg";
+// import accessory1 from "../assets/accessory1.svg";
+// import accessory2 from "../assets/accessory2.svg";
+// import accessory3 from "../assets/accessory3.svg";
+// import accessory5 from "../assets/accessory5.svg";
+// import accessory6 from "../assets/accessory6.svg";
+// import accessory7 from "../assets/accessory7.svg";
+// import outline from "../assets/outline.svg";
 
 function Landing() {
 	const Logo = () => <h1 className="cursor-pointer text-4xl font-bold">cb</h1>;
@@ -90,7 +90,5 @@ const Footer = ({ children }) => {
 		</div>
 	);
 };
-
-const Italic = ({ children }) => <span className="italic">{children}</span>;
 
 export default Landing;
