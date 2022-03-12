@@ -56,18 +56,18 @@ function Navbar({ logo, links, onChange = () => {}, scrollThreshold = 60 }) {
 					opacity: 1,
 				}}
 				transition={{
-					duration: 1
+					duration: 1,
 				}}
-
-				className={`fixed top-0 left-0 w-full h-[100px] flex text-textDark dark:text-textLight justify-around items-center z-50 transition-colors ${
-					isScrolled && "backdrop-blur-md bg-navbarBackgroundLight/80 dark:bg-navbarBackgroundDark/80"
-				}`}
+				className={`fixed top-0 left-0 w-full h-[85px] flex text-textDark dark:text-textLight justify-around items-center z-50 backdrop-blur-md bg-navbarBackgroundLight/80 dark:bg-navbarBackgroundDark/80`}
 			>
 				<div onClick={() => nav("/")} className="cursor-pointer">
 					{logo}
 				</div>
 				<div className="hidden gap-4 md:flex items-center">
-					{links && links.map((link, index) => <LinkItem index={index} key={index} link={link} />)}
+					{links &&
+						links.map((link, index) => (
+							<LinkItem index={index} key={index} link={link} />
+						))}
 				</div>
 				<div
 					onClick={handleBurgerClick}
@@ -91,7 +91,7 @@ function Navbar({ logo, links, onChange = () => {}, scrollThreshold = 60 }) {
 				</div>
 			</motion.div>
 			<div
-				className={`fixed top-0 left-0 duration-300 w-screen h-screen flex justify-center items-center bg-navbarBackgroundLight/80 dark:bg-navbarBackgroundDark/90 z-40 backdrop-blur-md ${
+				className={`fixed top-0 left-0 duration-300 w-screen h-screen flex justify-center items-center bg-navbarBackgroundLight/80 dark:bg-navbarBackgroundDark/80 z-40 backdrop-blur-md ${
 					!isOpen && "translate-x-full"
 				} md:hidden`}
 			>

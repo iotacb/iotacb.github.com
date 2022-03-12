@@ -16,12 +16,14 @@ import outline from "../assets/outline.svg";
 
 function Landing() {
 	const Logo = () => <h1 className="cursor-pointer text-4xl font-bold">cb</h1>;
-	const [isDarkTheme, setIsDarkTheme] = useState(document.documentElement.classList.contains("dark") || localStorage.getItem("dark-theme") === "true");
+	const [isDarkTheme, setIsDarkTheme] = useState(
+		document.documentElement.classList.contains("dark") ||
+			localStorage.getItem("dark-theme") === "true"
+	);
 
 	useEffect(() => {
 		const root = document.documentElement;
 		root.classList.toggle("dark", isDarkTheme);
-
 	}, [isDarkTheme, setIsDarkTheme]);
 
 	const links = [
@@ -66,15 +68,44 @@ const Title = () => (
 
 const Accessories = () => {
 	const images = [
-		{ style: "hidden lg:block absolute md:left-[10%] md:top-52", src: accessory1, rotate: true },
-		{ style: "hidden md:block absolute md:left-[8%] md:top-36", src: accessory2, rotate: true },
-		{ style: "hidden md:block absolute md:left-[20%] md:top-[80vh]", src: accessory3, rotate: true },
-		{ style: "hidden md:block absolute md:right-20 md:top-[70vh]", src: accessory5, rotate: true },
-		{ style: "hidden md:block absolute md:top-48 md:right-56", src: accessory6, rotate: true },
-		{ style: "hidden md:block absolute md:top-[70vh] md:left-[60%]", src: accessory7, rotate: true },
-		{ style: "hidden md:block absolute md:right-[20%] md:top-[100vh]", src: accessory3, rotate: true },
 		{
-			style: "absolute left-0 top-20 md:top-0 scale-150 md:scale-100 rotate-[320deg] md:rotate-0 w-[150vw] -z-10",
+			style: "hidden lg:block absolute md:left-[10%] md:top-52",
+			src: accessory1,
+			rotate: true,
+		},
+		{
+			style: "hidden md:block absolute md:left-[8%] md:top-36",
+			src: accessory2,
+			rotate: true,
+		},
+		{
+			style: "hidden md:block absolute md:left-[20%] md:top-[80vh]",
+			src: accessory3,
+			rotate: true,
+		},
+		{
+			style: "hidden md:block absolute md:right-20 md:top-[70vh]",
+			src: accessory5,
+			rotate: true,
+		},
+		{
+			style: "hidden md:block absolute md:top-48 md:right-56",
+			src: accessory6,
+			rotate: true,
+		},
+		{
+			style: "hidden md:block absolute md:top-[70vh] md:left-[60%]",
+			src: accessory7,
+			rotate: true,
+		},
+		{
+			style: "hidden md:block absolute md:right-[20%] md:top-[100vh]",
+			src: accessory3,
+			rotate: true,
+		},
+		{
+			style:
+				"absolute left-0 top-20 md:top-0 scale-150 md:scale-100 rotate-[320deg] md:rotate-0 w-[150vw] -z-10",
 			path: {
 				d: "M1924,1075.29c-227.83-73-338-181.07-396.45-265.08-70.48-101.28-55.44-152.86-143.37-316.68-64-119.23-213.87-356.31-302.14-332.44C997.44,184,1057.54,422.84,944.34,475.82,848.86,520.49,733.14,384.68,507,288.19,314.35,206,121.42,191.25-6.93,192.5",
 				stroke: "#7B57C6",
@@ -195,7 +226,10 @@ const SeeMore = ({ onClick }) => {
 
 const AboutMe = () => {
 	return (
-		<div id="about" className="xl:self-start w-full xl:w-1/2 scroll-m-40 flex flex-col gap-8">
+		<div
+			id="about"
+			className="xl:self-start w-full xl:w-1/2 scroll-m-40 flex flex-col gap-8"
+		>
 			<div className="relative w-fit">
 				<SlidingText
 					viewport={{
@@ -244,8 +278,9 @@ const AboutMe = () => {
 				}}
 				className="font-medium text-2xl md:text-4xl xl:text-6xl text-textDark dark:text-textLight"
 			>
-				i’m a <Italic>20 year old</Italic> developer from <Italic>germany</Italic>. I mainly work with{" "}
-				<Italic>javascript</Italic> and <Italic>react</Italic> at the moment. i like to build
+				i’m a <Italic>20 year old</Italic> developer from{" "}
+				<Italic>germany</Italic>. I mainly work with <Italic>javascript</Italic>{" "}
+				and <Italic>react</Italic> at the moment. i like to build
 				<Italic>web pages</Italic> and <Italic>beautiful ui</Italic>.
 			</motion.div>
 		</div>
@@ -255,7 +290,10 @@ const AboutMe = () => {
 const Projects = () => {
 	const nav = useNavigate();
 	return (
-		<div id="projects" className="xl:self-end w-full xl:w-1/2 scroll-m-40 flex flex-col gap-8">
+		<div
+			id="projects"
+			className="xl:self-end w-full xl:w-1/2 scroll-m-40 flex flex-col gap-8"
+		>
 			<div className="relative w-fit">
 				<SlidingText
 					viewport={{
