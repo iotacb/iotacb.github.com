@@ -3,16 +3,17 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import ParallaxComponent from "../components/ParallaxComponent";
 import SlidingText from "../components/SlidingText";
 
-import accessory1 from "../assets/accessory1.svg";
-import accessory2 from "../assets/accessory2.svg";
-import accessory3 from "../assets/accessory3.svg";
-import accessory5 from "../assets/accessory5.svg";
-import accessory6 from "../assets/accessory6.svg";
-import accessory7 from "../assets/accessory7.svg";
-import outline from "../assets/outline.svg";
+import accessory1 from "../assets/images/accessory1.svg";
+import accessory2 from "../assets/images/accessory2.svg";
+import accessory3 from "../assets/images/accessory3.svg";
+import accessory4 from "../assets/images/accessory4.svg";
+import accessory5 from "../assets/images/accessory5.svg";
+import accessory6 from "../assets/images/accessory6.svg";
+import outline from "../assets/images/outline.svg";
 
 function Landing() {
 	const Logo = () => <h1 className="cursor-pointer text-4xl font-bold">cb</h1>;
@@ -85,17 +86,17 @@ const Accessories = () => {
 		},
 		{
 			style: "hidden md:block absolute md:right-20 md:top-[70vh]",
-			src: accessory5,
+			src: accessory4,
 			rotate: true,
 		},
 		{
 			style: "hidden md:block absolute md:top-48 md:right-56",
-			src: accessory6,
+			src: accessory5,
 			rotate: true,
 		},
 		{
 			style: "hidden md:block absolute md:top-[70vh] md:left-[60%]",
-			src: accessory7,
+			src: accessory6,
 			rotate: true,
 		},
 		{
@@ -172,7 +173,7 @@ const Accessories = () => {
 
 const SeeMore = ({ onClick }) => {
 	return (
-		<motion.div
+		<motion.a
 			initial={{
 				y: -40,
 				opacity: 0,
@@ -186,10 +187,11 @@ const SeeMore = ({ onClick }) => {
 				duration: 1,
 				delay: 1,
 			}}
+			href="#about"
 			onClick={onClick}
 			className={`hidden absolute text-textDark dark:text-textLight cursor-pointer md:flex flex-col justify-center items-center bottom-20`}
 		>
-			<motion.a
+			<motion.p
 				initial={{
 					y: -5,
 				}}
@@ -203,10 +205,9 @@ const SeeMore = ({ onClick }) => {
 					repeatType: "reverse",
 					bounce: 0.5,
 				}}
-				href="#about"
 			>
 				See more
-			</motion.a>
+			</motion.p>
 			<motion.div
 				animate={{
 					scale: [0.9, 1],
@@ -220,7 +221,7 @@ const SeeMore = ({ onClick }) => {
 				}}
 				className="w-80 h-1 bg-backgroundDark/50 dark:bg-backgroundLight/50 rounded-sm"
 			></motion.div>
-		</motion.div>
+		</motion.a>
 	);
 };
 
@@ -300,7 +301,8 @@ const Projects = () => {
 						amount: 1,
 						once: true,
 					}}
-					className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold inline-block text-textDark dark:text-textLight"
+					y={170}
+					className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold inline-block py-4 text-textDark dark:text-textLight"
 				>
 					my projects
 				</SlidingText>
@@ -352,14 +354,6 @@ const Projects = () => {
 					you can a all of my projects and get information about them
 				</p>
 			</motion.div>
-		</div>
-	);
-};
-
-const Footer = ({ children }) => {
-	return (
-		<div className="w-full py-16 px-28 flex justify-around items-center text-textDark dark:text-textLight bg-navbarBackgroundLight dark:bg-navbarBackgroundDark">
-			{children}
 		</div>
 	);
 };
