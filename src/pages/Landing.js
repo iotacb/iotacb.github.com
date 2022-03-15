@@ -16,16 +16,27 @@ import accessory6 from "../assets/images/accessory6.svg";
 import outline from "../assets/images/outline.svg";
 
 function Landing() {
-	const Logo = () => <h1 className="cursor-pointer text-4xl font-bold">cb</h1>;
+	const Logo = () => <h1 onClick={() => easterEgg()} className="cursor-pointer text-4xl font-bold">cb</h1>;
 	const [isDarkTheme, setIsDarkTheme] = useState(
 		document.documentElement.classList.contains("dark") ||
 			localStorage.getItem("dark-theme") === "true"
 	);
 
+	const [logoClicks, setLogoClicks] = useState(0);
+
 	useEffect(() => {
 		const root = document.documentElement;
 		root.classList.toggle("dark", isDarkTheme);
 	}, [isDarkTheme, setIsDarkTheme]);
+
+	const easterEgg = () => {
+		setLogoClicks(current => {
+			if (current >= 10) {
+				return 0;
+			}
+			return current + 1;
+		})
+	}
 
 	const links = [
 		{ name: "home", href: "/" },
@@ -344,7 +355,7 @@ const Projects = () => {
 				}}
 				className="font-medium text-2xl md:text-4xl xl:text-6xl text-textDark dark:text-textLight"
 			>
-				<p>
+				<div>
 					<p
 						onClick={() => nav("/projects")}
 						className="text-accent hover:text-accentLight transition-colors cursor-pointer"
@@ -352,7 +363,7 @@ const Projects = () => {
 						here
 					</p>{" "}
 					you can a all of my projects and get information about them
-				</p>
+				</div>
 			</motion.div>
 		</div>
 	);

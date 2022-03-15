@@ -24,22 +24,20 @@ module.exports = {
 			},
 			boxShadow: {
 				smooth: [
-					"2.8px 2.8px 3.9px rgba(0, 0, 0, 0.014)",
-					"6.7px 6.7px 9.3px rgba(0, 0, 0, 0.02)",
-					"12.5px 12.5px 17.5px rgba(0, 0, 0, 0.025)",
-					"22.3px 22.3px 31.3px rgba(0, 0, 0, 0.03)",
-					"41.8px 41.8px 58.5px rgba(0, 0, 0, 0.036)",
-					"100px 100px 140px rgba(0, 0, 0, 0.05)",
+					"3.4px 3.4px 3.4px -20px rgba(0, 0, 0, 0.016)",
+					"8.7px 8.7px 8.7px -20px rgba(0, 0, 0, 0.022)",
+					"17.7px 17.7px 17.7px -20px rgba(0, 0, 0, 0.028)",
+					"36.5px 36.5px 36.5px -20px rgba(0, 0, 0, 0.034)",
+					"100px 100px 100px -20px rgba(0, 0, 0, 0.05)"
 				],
 			},
 			dropShadow: {
 				smooth: [
-					"2.8px 2.8px 3.9px rgba(0, 0, 0, 0.014)",
-					"6.7px 6.7px 9.3px rgba(0, 0, 0, 0.02)",
-					"12.5px 12.5px 17.5px rgba(0, 0, 0, 0.025)",
-					"22.3px 22.3px 31.3px rgba(0, 0, 0, 0.03)",
-					"41.8px 41.8px 58.5px rgba(0, 0, 0, 0.036)",
-					"100px 100px 140px rgba(0, 0, 0, 0.05)",
+					"3.4px 3.4px 3.4px -20px rgba(0, 0, 0, 0.016)",
+					"8.7px 8.7px 8.7px -20px rgba(0, 0, 0, 0.022)",
+					"17.7px 17.7px 17.7px -20px rgba(0, 0, 0, 0.028)",
+					"36.5px 36.5px 36.5px -20px rgba(0, 0, 0, 0.034)",
+					"100px 100px 100px -20px rgba(0, 0, 0, 0.05)"
 				],
 			},
 		},

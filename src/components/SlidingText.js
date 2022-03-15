@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-function SlidingText({ className, viewport, children, duration = 1, delay, y = 100 }) {
+function SlidingText({ className, viewport, children, duration = 1, delay, y = 100, onClick = () => {} }) {
 	return viewport === undefined ? (
-		<motion.div className={`overflow-hidden flex items-center ${className}`}>
+		<motion.div onClick={onClick} className={`overflow-hidden flex items-center ${className}`}>
 			<motion.span
 				initial={{
 					y: y,
@@ -46,4 +46,3 @@ function SlidingText({ className, viewport, children, duration = 1, delay, y = 1
 }
 
 export default SlidingText;
-export {};

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
-function Navbar({ logo, links, onChange = () => {}, scrollThreshold = 60 }) {
+function Navbar({ logo, links, onChange = () => {}, onLogoClick = () => {}, scrollThreshold = 60 }) {
 	const nav = useNavigate();
 	const [isOpen, setIsOpen] = useState();
 	const [isScrolled, setIsScrolled] = useState();
@@ -60,7 +60,7 @@ function Navbar({ logo, links, onChange = () => {}, scrollThreshold = 60 }) {
 				}}
 				className={`fixed top-0 left-0 w-full h-[85px] flex text-textDark dark:text-textLight justify-around items-center z-50 backdrop-blur-md bg-navbarBackgroundLight/80 dark:bg-navbarBackgroundDark/80`}
 			>
-				<div onClick={() => nav("/")} className="cursor-pointer">
+				<div onClick={() => {nav("/"); onLogoClick()}} className="cursor-pointer">
 					{logo}
 				</div>
 				<div className="hidden gap-4 md:flex items-center">
@@ -111,4 +111,3 @@ function Navbar({ logo, links, onChange = () => {}, scrollThreshold = 60 }) {
 }
 
 export default Navbar;
-export {};

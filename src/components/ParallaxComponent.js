@@ -11,4 +11,3 @@ function ParallaxComponent({children, speed = 1, className = ""}) {
 }
 
 export default ParallaxComponent
-export {}
