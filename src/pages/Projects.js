@@ -13,7 +13,8 @@ import dlduImage from "../assets/images/projects/dldu.webp";
 function Projects() {
 	const Logo = () => <h1 className="cursor-pointer text-4xl font-bold">cb</h1>;
 	const [isDarkTheme, setIsDarkTheme] = useState(
-		document.documentElement.classList.contains("dark") || localStorage.getItem("dark-theme") === "true"
+		document.documentElement.classList.contains("dark") ||
+			localStorage.getItem("dark-theme") === "true"
 	);
 
 	useEffect(() => {
@@ -37,7 +38,8 @@ function Projects() {
 		{
 			title: "Sharrings",
 			image: sharringsImage,
-			description: "Sharrings is a platform to keep all your socials at one place.",
+			description:
+				"Sharrings is a platform to keep all your socials at one place.",
 			href: "https://sharrin.gs/",
 		},
 		{
@@ -49,7 +51,8 @@ function Projects() {
 		{
 			title: "DLDU-Points",
 			image: dlduImage,
-			description: "A application for the DLDU event to display the current points in a OBS browser source",
+			description:
+				"A application for the DLDU event to display the current points in a OBS browser source",
 		},
 		{
 			image: memeImage,
@@ -82,7 +85,15 @@ function Projects() {
 	);
 }
 
-const ProjectCard = ({ i, empty, title, image, href, description, onClick = () => {} }) => {
+const ProjectCard = ({
+	i,
+	empty,
+	title,
+	image,
+	href,
+	description,
+	onClick = () => {},
+}) => {
 	return (
 		<motion.a
 			initial={{
@@ -116,8 +127,10 @@ const ProjectCard = ({ i, empty, title, image, href, description, onClick = () =
 		>
 			{empty ? (
 				<div className="flex flex-col justify-between items-center h-full">
-					<img className="w-full rounded-b-2xl" src={memeImage}/>
-					<p className="text-3xl lg:text-4xl inline-block py-4 text-textDark dark:text-textLight">i need more projects...</p>
+					<img className="w-full rounded-b-2xl" src={memeImage} />
+					<p className="text-3xl lg:text-4xl inline-block py-4 text-textDark dark:text-textLight">
+						i need more projects...
+					</p>
 				</div>
 			) : (
 				<>
@@ -127,7 +140,9 @@ const ProjectCard = ({ i, empty, title, image, href, description, onClick = () =
 						<h1 className="text-3xl lg:text-4xl font-bold inline-block py-4 text-textDark dark:text-textLight">
 							{title}
 						</h1>
-						<p className="text-xl inline-block py-4 text-textDark dark:text-textLight">{description}</p>
+						<p className="text-xl inline-block py-4 text-textDark dark:text-textLight">
+							{description}
+						</p>
 					</div>
 				</>
 			)}

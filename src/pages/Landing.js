@@ -16,7 +16,14 @@ import accessory6 from "../assets/images/accessory6.svg";
 import outline from "../assets/images/outline.svg";
 
 function Landing() {
-	const Logo = () => <h1 onClick={() => easterEgg()} className="cursor-pointer text-4xl font-bold">cb</h1>;
+	const Logo = () => (
+		<h1
+			onClick={() => easterEgg()}
+			className="cursor-pointer text-4xl font-bold"
+		>
+			cb
+		</h1>
+	);
 	const [isDarkTheme, setIsDarkTheme] = useState(
 		document.documentElement.classList.contains("dark") ||
 			localStorage.getItem("dark-theme") === "true"
@@ -30,13 +37,13 @@ function Landing() {
 	}, [isDarkTheme, setIsDarkTheme]);
 
 	const easterEgg = () => {
-		setLogoClicks(current => {
+		setLogoClicks((current) => {
 			if (current >= 10) {
 				return 0;
 			}
 			return current + 1;
-		})
-	}
+		});
+	};
 
 	const links = [
 		{ name: "home", href: "/" },

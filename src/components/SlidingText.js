@@ -1,9 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-function SlidingText({ className, viewport, children, duration = 1, delay, y = 100, onClick = () => {} }) {
+function SlidingText({
+	className,
+	viewport,
+	children,
+	duration = 1,
+	delay,
+	y = 100,
+	onClick = () => {},
+}) {
 	return viewport === undefined ? (
-		<motion.div onClick={onClick} className={`overflow-hidden flex items-center ${className}`}>
+		<motion.div
+			onClick={onClick}
+			className={`overflow-hidden flex items-center ${className}`}
+		>
 			<motion.span
 				initial={{
 					y: y,
@@ -22,11 +33,16 @@ function SlidingText({ className, viewport, children, duration = 1, delay, y = 1
 			</motion.span>
 		</motion.div>
 	) : (
-		<motion.div viewport={viewport} initial="initial" whileInView="animate" className={`overflow-hidden flex items-center ${className}`}>
+		<motion.div
+			viewport={viewport}
+			initial="initial"
+			whileInView="animate"
+			className={`overflow-hidden flex items-center ${className}`}
+		>
 			<motion.span
 				variants={{
 					initial: {
-						y: y
+						y: y,
 					},
 					animate: {
 						y: 0,
@@ -34,8 +50,8 @@ function SlidingText({ className, viewport, children, duration = 1, delay, y = 1
 							ease: [0.6, 0.01, -0.05, 0.95],
 							duration: duration,
 							delay: delay,
-						}
-					}
+						},
+					},
 				}}
 				className="relative inline-block whitespace-nowrap"
 			>

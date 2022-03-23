@@ -1,6 +1,6 @@
 import React from "react";
 
-import SocialButton from "./SocialButton"
+import SocialButton from "./SocialButton";
 
 import GithubIcon from "../assets/images/GithubIcon";
 import CodepenIcon from "../assets/images/CodepenIcon";
@@ -11,9 +11,21 @@ function Footer({ children }) {
 		<div className="w-full py-8 px-28 flex flex-col sm:flex-row justify-around items-center text-textDark dark:text-textLight bg-navbarBackgroundLight dark:bg-navbarBackgroundDark">
 			{children}
 			<div className="flex gap-4 mt-4 sm:mt-0">
-				<SocialButton href="https://github.com/iotacb" image={<GithubIcon/>} className="fill-textLight dark:fill-textDark"/>
-				<SocialButton href="https://codepen.io/iotacb" image={<CodepenIcon/>} className="fill-textLight dark:fill-textDark"/>
-				<SocialButton href="https://www.instagram.com/chris.brandt09/" image={<InstagramIcon/>} className="fill-textLight dark:fill-textDark"/>
+				<SocialButton
+					href="https://github.com/iotacb"
+					image={<GithubIcon />}
+					className="fill-textLight dark:fill-textDark"
+				/>
+				<SocialButton
+					href="https://codepen.io/iotacb"
+					image={<CodepenIcon />}
+					className="fill-textLight dark:fill-textDark"
+				/>
+				<SocialButton
+					href="https://www.instagram.com/chris.brandt09/"
+					image={<InstagramIcon />}
+					className="fill-textLight dark:fill-textDark"
+				/>
 			</div>
 		</div>
 	);

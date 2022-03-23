@@ -10,7 +10,8 @@ function Missing() {
 	const nav = useNavigate();
 	const Logo = () => <h1 className="cursor-pointer text-4xl font-bold">cb</h1>;
 	const [isDarkTheme, setIsDarkTheme] = useState(
-		document.documentElement.classList.contains("dark") || localStorage.getItem("dark-theme") === "true"
+		document.documentElement.classList.contains("dark") ||
+			localStorage.getItem("dark-theme") === "true"
 	);
 
 	useEffect(() => {
@@ -34,8 +35,14 @@ function Missing() {
 		<>
 			<Navbar logo={<Logo />} links={links} />
 			<section className="w-full h-screen flex flex-col justify-center items-center relative p-12">
-				<SlidingText className="text-4xl md:text-6xl text-textDark dark:text-textLight">i think you</SlidingText>
-				<SlidingText delay={0.1} y={160} className="text-4xl md:text-6xl p-4 text-textDark dark:text-textLight">
+				<SlidingText className="text-4xl md:text-6xl text-textDark dark:text-textLight">
+					i think you
+				</SlidingText>
+				<SlidingText
+					delay={0.1}
+					y={160}
+					className="text-4xl md:text-6xl p-4 text-textDark dark:text-textLight"
+				>
 					shouldn't be here
 				</SlidingText>
 				<SlidingText
